@@ -4,13 +4,14 @@
   "description": "Task4 From iTransition Internship",
   "main": "index.js",
   "scripts": {
-    "serve": "node app.mjs"
+    "serve": "node --watch app.mjs"
   },
   "author": "wintercr",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
-    "express-validator": "^7.2.0"
+    "express-validator": "^7.2.0",
+    "seedrandom": "^3.0.5"
   }
 }
