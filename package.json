@@ -1,7 +1,7 @@
 {
   "name": "regisflow-backend",
   "version": "1.0.0",
-  "description": "Task4 From iTransition Internship",
+  "description": "Task5 From iTransition Internship",
   "main": "index.js",
   "scripts": {
     "serve": "node --watch app.mjs"
@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "express-validator": "^7.2.0",
-    "seedrandom": "^3.0.5"
+    "seedrandom": "^3.0.5",
+    "uuid": "^10.0.0"
   }
 }
