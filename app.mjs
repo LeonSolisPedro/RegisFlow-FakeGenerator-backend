@@ -12,7 +12,7 @@ app.use(express.json());
 app.post("/api/generatedata", [
   query("seednumber").notEmpty().isNumeric(),
   query("totalperpage").default(20).isNumeric().toInt(),
-  query("probability").notEmpty().isNumeric().isInt({ min: 0, max: 1000 }).toInt(),
+  query("probability").notEmpty().isNumeric().isFloat({ min: 0, max: 10 }).toFloat(),
   query("region").notEmpty().isIn(["MXN", "USA", "ITA"])
 ], validation, async (req, res) => {
   const { seednumber, totalperpage, probability, region } = req.query
@@ -28,7 +28,7 @@ app.post("/api/generatedata", [
 app.post("/api/continue", [
   body("seeddata").notEmpty(),
   query("totalperpage").default(10).isNumeric().toInt(),
-  query("probability").notEmpty().isNumeric().isInt({ min: 0, max: 1000 }).toInt(),
+  query("probability").notEmpty().isNumeric().isFloat({ min: 0, max: 10 }).toFloat(),
   query("region").notEmpty().isIn(["MXN", "USA", "ITA"])
 ], validation, async (req, res) => {
   const { seeddata } = req.body

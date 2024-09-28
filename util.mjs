@@ -24,7 +24,7 @@ export async function readRandomLine(filepath, seedrandom) {
 export function scrambleWord(string, probability, methodScram) {
   return string.split("").map((word, i, arr) => {
     if (word === " ") return word
-    if ((methodScram() * 1000) < probability) {
+    if ((methodScram() * 10) < probability) {
       const alphabet = 'abcdefghijklmnopqrstuvwxyz';
       const randomItem = Math.floor(methodScram() * 3);
       if (randomItem === 0) return ""
